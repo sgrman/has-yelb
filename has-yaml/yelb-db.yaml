@@ -1,3 +1,18 @@
+#Deployment for DB
+apiVersion: v1
+kind: Service
+metadata:
+  name: yelb-db
+  labels:
+    app: yelb-db
+    tier: backenddb
+spec:
+  type: ClusterIP
+  ports:
+  - port: 5432
+  selector:
+    app: yelb-db
+    tier: backenddb
 ---
 apiVersion: extensions/v1beta1
 kind: Deployment
@@ -16,18 +31,3 @@ spec:
         image: harbor.sgrhas.local/yelb/yelb-db:1
         ports:
           - containerPort: 5432
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: yelb-db
-  labels:
-    app: yelb-db
-    tier: backenddb
-spec:
-  type: ClusterIP
-  ports:
-  - port: 5432
-  selector:
-    app: yelb-db
-    tier: backenddb
