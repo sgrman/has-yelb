@@ -28,6 +28,6 @@ spec:
     spec:
       containers:
       - name: yelb-db
-        image: harbor.sgrhas.local/yelb/yelb-db:1
+        image: harbor.sgrhas.local/yelb/yelb-db:v1
         ports:
           - containerPort: 5432

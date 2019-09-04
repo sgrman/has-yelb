@@ -13,7 +13,7 @@ spec:
   spec:
     containers:
     - name: redis-server
-      image: harbor.sgrhas.local/yelb/yelb-redis:1
+      image: harbor.sgrhas.local/yelb/yelb-redis:v1
       ports:
       - containerPort: 6379
 

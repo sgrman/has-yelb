@@ -29,6 +29,6 @@ spec:
     spec:
       containers:
       - name: yelb-ui
-        image:  harbor.sgrhas.local/yelb/yelb-ui:1
+        image:  harbor.sgrhas.local/yelb/yelb-ui:v1
         ports:
         - containerPort: 80
